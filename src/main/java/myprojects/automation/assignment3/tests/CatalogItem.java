@@ -81,9 +81,8 @@ public class CatalogItem extends PageObject {
 
         waitTheElement(driver, successfulMessage,10);
 
-        System.out.println(successfulMessage.getText().substring(2, 9));
+        //System.out.println(successfulMessage.getText().substring(2, 9));
         Assert.assertEquals(successful, successfulMessage.getText().substring(2, 9));
-
     }
 
     public void filterName(){
@@ -97,9 +96,8 @@ public class CatalogItem extends PageObject {
 
         waitTheElement(driver, yourCategory,10);
 
-        System.out.println(yourCategory.getText());
+        //System.out.println(yourCategory.getText());
         Assert.assertEquals(yourCateg, yourCategory.getText());
-
     }
 
     public void waitTheElement(EventFiringWebDriver driver, WebElement element, int timeSec){
