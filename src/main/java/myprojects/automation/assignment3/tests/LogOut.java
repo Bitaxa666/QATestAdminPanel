@@ -2,6 +2,7 @@ package myprojects.automation.assignment3.tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,9 +17,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  */
 public class LogOut extends PageObject {
 
+    @CacheLookup
     @FindBy(xpath=".//*[@id='employee_infos']/a/span/img")
     private WebElement logOutIcon;
 
+    @CacheLookup
     @FindBy(id="header_logout")
     private WebElement logOutBtn;
 

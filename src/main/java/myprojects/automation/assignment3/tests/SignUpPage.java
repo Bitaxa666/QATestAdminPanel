@@ -2,6 +2,7 @@ package myprojects.automation.assignment3.tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -12,12 +13,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  * Created by user on 10/3/17.
  */
 public class SignUpPage extends PageObject {
+    @CacheLookup
     @FindBy(id="email")
     private WebElement email;
 
+    @CacheLookup
     @FindBy(id="passwd")
     private WebElement password;
 
+    @CacheLookup
     @FindBy(name = "submitLogin")
     private WebElement submitButton;
 

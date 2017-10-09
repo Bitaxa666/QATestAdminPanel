@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -18,29 +19,37 @@ import org.testng.Assert;
  */
 public class CatalogItem extends PageObject {
 
+    @CacheLookup
     @FindBy(id="subtab-AdminCatalog")
     private WebElement catalog;
 
+    @CacheLookup
     //@FindBy(css = "a[title='Добавить категорию']")
     @FindBy(css = ".process-icon-new")
     private WebElement newCategory;
 
+    @CacheLookup
     @FindBy(xpath=".//*[@id='employee_infos']/a/span/img")
     private WebElement logOutIcon;
 
+    @CacheLookup
     @FindBy (id = "name_1")
     private WebElement inputNameCategory;
 
+    @CacheLookup
     @FindBy (id = "category_form_submit_btn")
     private WebElement addBtnCategory;
 
+    @CacheLookup
     //@FindBy (css = "button[data-dismiss='alert']")
     @FindBy (xpath = ".//*[@id='content']/div[3]/div")
     private WebElement successfulMessage;
 
+    @CacheLookup
     @FindBy (css = "#table-category td:nth-child(3)")
     private WebElement yourCategory;
 
+    @CacheLookup
     @FindBy (xpath = ".//*[@id='table-category']/thead/tr[1]/th[3]/span/a[1]/i")
     private WebElement filterName;
 

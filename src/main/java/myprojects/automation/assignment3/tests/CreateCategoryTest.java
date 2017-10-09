@@ -18,13 +18,13 @@ public class CreateCategoryTest extends BaseScript {
             signUpPage.enterName(Properties.getAdminEmail(), Properties.getAdminPWD());
             signUpPage.submitBtn();
 
-            CatalogItem catalog = new CatalogItem(driver);
-            catalog.markCatalogItem();
-            catalog.addCategoryClickBtn();
-            catalog.addNewCategoryName(Properties.getCategoryName());
-            catalog.successfulAddCategory(CreateCategoryTest.OKEY);
-            catalog.filterName();
-            catalog.findYourCategory(Properties.getCategoryName());
+//            CatalogItem catalog = new CatalogItem(driver);
+//            catalog.markCatalogItem();
+//            catalog.addCategoryClickBtn();
+//            catalog.addNewCategoryName(Properties.getCategoryName());
+//            catalog.successfulAddCategory(CreateCategoryTest.OKEY);
+//            catalog.filterName();
+//            catalog.findYourCategory(Properties.getCategoryName());
 
             LogOut logOutSite = new LogOut(driver);
             logOutSite.logOutOnPage();
